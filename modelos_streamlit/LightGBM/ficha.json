@@ -1,0 +1,164 @@
+{
+  "nombre": "LightGBM",
+  "descripcion": "LightGBM con class_weight y parámetros {'learning_rate': 0.03, 'n_estimators': 300, 'num_leaves': 15}. Modelo elegido como campeón final del proyecto.",
+  "umbral": 0.46,
+  "supuestos": {
+    "costo_llamada": 1.0,
+    "valor_suscripcion": 10.0
+  },
+  "metricas_test": {
+    "ROC-AUC": 0.7401,
+    "PR-AUC": 0.3934,
+    "Recall": 0.62,
+    "Precision": 0.2451,
+    "F1-Score": 0.3514,
+    "Beneficio test": 3884.0,
+    "% clientes a llamar": 29.5919,
+    "% suscripciones capturadas": 62.0038
+  },
+  "matriz_confusion": [
+    [
+      5965,
+      2020
+    ],
+    [
+      402,
+      656
+    ]
+  ],
+  "etiquetas_matriz": {
+    "filas": [
+      "No suscribe",
+      "Suscribe"
+    ],
+    "columnas": [
+      "No llamar",
+      "Llamar"
+    ]
+  },
+  "orden_columnas": [
+    "age",
+    "job",
+    "marital",
+    "education",
+    "default",
+    "balance",
+    "housing",
+    "loan",
+    "pdays",
+    "previous",
+    "poutcome",
+    "contactado_antes"
+  ],
+  "columnas_entrada": {
+    "age": {
+      "tipo": "numerica",
+      "min": 18.0,
+      "max": 95.0,
+      "mediana": 39.0
+    },
+    "job": {
+      "tipo": "categorica",
+      "opciones": [
+        "admin.",
+        "blue-collar",
+        "entrepreneur",
+        "housemaid",
+        "management",
+        "retired",
+        "self-employed",
+        "services",
+        "student",
+        "technician",
+        "unemployed",
+        "unknown"
+      ]
+    },
+    "marital": {
+      "tipo": "categorica",
+      "opciones": [
+        "divorced",
+        "married",
+        "single"
+      ]
+    },
+    "education": {
+      "tipo": "categorica",
+      "opciones": [
+        "primary",
+        "secondary",
+        "tertiary",
+        "unknown"
+      ]
+    },
+    "default": {
+      "tipo": "binaria",
+      "opciones": [
+        0,
+        1
+      ]
+    },
+    "balance": {
+      "tipo": "numerica",
+      "min": -8019.0,
+      "max": 102127.0,
+      "mediana": 451.0
+    },
+    "housing": {
+      "tipo": "binaria",
+      "opciones": [
+        0,
+        1
+      ]
+    },
+    "loan": {
+      "tipo": "binaria",
+      "opciones": [
+        0,
+        1
+      ]
+    },
+    "pdays": {
+      "tipo": "numerica",
+      "min": 1.0,
+      "max": 871.0,
+      "mediana": 195.0
+    },
+    "previous": {
+      "tipo": "numerica",
+      "min": 0.0,
+      "max": 275.0,
+      "mediana": 0.0
+    },
+    "poutcome": {
+      "tipo": "categorica",
+      "opciones": [
+        "failure",
+        "other",
+        "sin_contacto_previo",
+        "success"
+      ]
+    },
+    "contactado_antes": {
+      "tipo": "binaria",
+      "opciones": [
+        0,
+        1
+      ]
+    }
+  },
+  "importancia_variables": {
+    "poutcome": 0.1522,
+    "age": 0.0373,
+    "pdays": 0.0352,
+    "housing": 0.0346,
+    "balance": 0.0151,
+    "previous": 0.0067,
+    "loan": 0.0065,
+    "education": 0.0053,
+    "job": 0.0046,
+    "marital": 0.0029,
+    "contactado_antes": 0.0,
+    "default": -0.0
+  }
+}
